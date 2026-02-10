@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Una pregunta importante 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #444;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 380px;
+      width: 90%;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 18px;
+      margin: 8px;
+      border: none;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+
+    .primary {
+      background: #ff7aa2;
+      color: white;
+    }
+
+    .secondary {
+      background: #e0d4ff;
+      color: #444;
+    }
+
+    .neutral {
+      background: #f2f2f2;
+      color: #444;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="content">
+    <h1>Hola, tú 🫵😄</h1>
+    <p>Tengo una pregunta importante…</p>
+    <button class="primary" onclick="step2()">A ver 👀</button>
+  </div>
+
+  <script>
+    function step2() {
+      document.getElementById("content").innerHTML = `
+        <h1>Te soy sincero 😅</h1>
+        <p>
+          La mayoría manda mensajes normales…<br>
+          yo me compliqué un poquito 😌<br><br>
+          Pero es porque me importas.
+        </p>
+        <button class="primary" onclick="step3()">Continúa 👉</button>
+      `;
+    }
+
+    function step3() {
+      document.getElementById("content").innerHTML = `
+        <h1>Entonces… 💌</h1>
+        <p>¿Te gustaría ser mi San Valentín?</p>
+
+        <button class="primary" onclick="yes()">💕 Sí, obvio</button><br>
+        <button class="secondary" onclick="talk()">🤍 Lo pensamos / hablemos</button><br>
+        <button class="neutral" onclick="thanks()">😂 Me dio risa, gracias</button>
+      `;
+    }
+
+    function yes() {
+      document.getElementById("content").innerHTML = `
+        <h1>🥹💖</h1>
+        <p>
+          Me hiciste sonreír bastante.<br>
+          Gracias por decir que sí ✨<br><br>
+          Prometo risas, detalles y pasarla bonito.
+        </p>
+      `;
+    }
+
+    function talk() {
+      document.getElementById("content").innerHTML = `
+        <h1>🤍</h1>
+        <p>
+          Me parece perfecto.<br>
+          Gracias por la sinceridad 😊<br><br>
+          Cuando quieras, lo hablamos tranquilos.
+        </p>
+      `;
+    }
+
+    function thanks() {
+      document.getElementById("content").innerHTML = `
+        <h1>😄</h1>
+        <p>
+          Objetivo cumplido entonces 😂<br>
+          Gracias por tomarte el tiempo de verlo.<br><br>
+          Te mando un abrazo bonito ✨
+        </p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
