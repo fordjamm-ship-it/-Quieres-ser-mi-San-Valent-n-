@@ -77,68 +77,78 @@
 <body>
 
   <div class="card" id="content">
-    <h1>Hola, tú 🫵😄</h1>
-    <p>Tengo una pregunta importante…</p>
-    <button class="primary" onclick="step2()">A ver 👀</button>
-  </div>
+
+  <h1>Odiii 🥺</h1>
+
+  <p>hay algo que me gustaría preguntarte.</p>
+
+  <img src="gatito.png" alt="gatito cute"
+       style="width:200px; margin:20px auto; display:block;">
+
+  <button class="primary" onclick="step2()">D1, tell me.</button>
+
+</div>
 
   <script>
     function step2() {
-      document.getElementById("content").innerHTML = `
-        <h1>Te soy sincero 😅</h1>
-        <p>
-          La mayoría manda mensajes normales…<br>
-          yo me compliqué un poquito 😌<br><br>
-          Pero es porque me importas.
-        </p>
-        <button class="primary" onclick="step3()">Continúa 👉</button>
-      `;
-    }
+  document.getElementById("content").innerHTML = `
+    <h1>Hablando desde la mente 🧠</h1>
 
-    function step3() {
-      document.getElementById("content").innerHTML = `
-        <h1>Entonces… 💌</h1>
-        <p>¿Te gustaría ser mi San Valentín?</p>
+    <p>
+      No eres ordinaria, eres alguien asombrosa, agradable y elocuente.<br><br>
+      Y si tu mundo es un rompecabezas,
+      me encantaría complicarme para entender
+      cada una de sus piezas, encantado al momento
+      de simplemente conectar.
+    </p>
 
-        <button class="primary" onclick="yes()">💕 Sí, obvio</button><br>
-        <button class="secondary" onclick="talk()">🤍 Lo pensamos / hablemos</button><br>
-        <button class="neutral" onclick="thanks()">😂 Me dio risa, gracias</button>
-      `;
-    }
+    <img src="conejito.png" alt="conejito cute"
+         style="width:200px; margin:20px auto; display:block;">
 
-    function yes() {
-      document.getElementById("content").innerHTML = `
-        <h1>🥹💖</h1>
-        <p>
-          Me hiciste sonreír bastante.<br>
-          Gracias por decir que sí ✨<br><br>
-          Prometo risas, detalles y pasarla bonito.
-        </p>
-      `;
-    }
+    <button class="primary" onclick="step3()">Siguee 🐰</button>
+  `;
+}
 
-    function talk() {
-      document.getElementById("content").innerHTML = `
-        <h1>🤍</h1>
-        <p>
-          Me parece perfecto.<br>
-          Gracias por la sinceridad 😊<br><br>
-          Cuando quieras, lo hablamos tranquilos.
-        </p>
-      `;
-    }
+function step3() {
+  document.getElementById("content").innerHTML = `
+    <h1>Entonces… 💌</h1>
+    <p>¿Te gustaría que seamos San Valentín?</p>
 
-    function thanks() {
-      document.getElementById("content").innerHTML = `
-        <h1>😄</h1>
-        <p>
-          Objetivo cumplido entonces 😂<br>
-          Gracias por tomarte el tiempo de verlo.<br><br>
-          Te mando un abrazo bonito ✨
-        </p>
-      `;
-    }
+    <button class="primary" onclick="yes()">Obviously, d1, okitooo 💕</button><br>
+    <button class="secondary" onclick="talk()">Nopii, tenkiuu 🤍</button>
+  `;
+}
+
+function yes() {
+  document.getElementById("content").innerHTML = `
+    <h1>🥹💖</h1>
+
+    <img src="ositos.png" alt="ositos con corazón"
+         style="width:220px; margin:20px auto; display:block;">
+
+    <p>
+      La parte más linda de despertar es poder pensarte apenas abro los ojos.<br><br>
+      Y es que no hay alma más bella que la que destella a través de tu cuerpo.<br><br>
+      Espero sacarte una gran sonrisaaaa 💕
+    </p>
+  `;
+}
+
+function talk() {
+  document.getElementById("content").innerHTML = `
+    <h1>🤍</h1>
+    <p>
+      ¿Cómo lograste llegar, al mundo real?<br>
+      ¿Qué estás haciendo aquí?<br><br>
+      Tan cerca que te puedo tocar.<br>
+      ¿Qué estás haciendo aquí?<br>
+      ¿Qué me estás haciendo a mí?
+    </p>
+  `;
+}
+
   </script>
 
 </body>
+
 </html>
