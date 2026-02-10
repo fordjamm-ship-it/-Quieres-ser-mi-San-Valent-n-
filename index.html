@@ -78,77 +78,86 @@
 
   <div class="card" id="content">
 
-  <h1>Odiii 🥺</h1>
+    <h1>Odiii 🥺</h1>
 
-  <p>hay algo que me gustaría preguntarte.</p>
+    <p>hay algo que me gustaría preguntarte.</p>
 
-  <img src="gatito.png" alt="gatito cute"
-       style="width:200px; margin:20px auto; display:block;">
-
-  <button class="primary" onclick="step2()">D1, tell me.</button>
-
-</div>
-
-  <script>
-    function step2() {
-  document.getElementById("content").innerHTML = `
-    <h1>Hablando desde la mente 🧠</h1>
-
-    <p>
-      No eres ordinaria, eres alguien asombrosa, agradable y elocuente.<br><br>
-      Y si tu mundo es un rompecabezas,
-      me encantaría complicarme para entender
-      cada una de sus piezas, encantado al momento
-      de simplemente conectar.
-    </p>
-
-    <img src="conejito.png" alt="conejito cute"
+    <img src="gatito.png" alt="gatito cute"
          style="width:200px; margin:20px auto; display:block;">
 
-    <button class="primary" onclick="step3()">Siguee 🐰</button>
-  `;
-}
+    <button class="primary" onclick="step2()">D1, tell me.</button>
 
-function step3() {
-  document.getElementById("content").innerHTML = `
-    <h1>Entonces… 💌</h1>
-    <p>¿Te gustaría que seamos San Valentín?</p>
+  </div>
 
-    <button class="primary" onclick="yes()">Obviously, d1, okitooo 💕</button><br>
-    <button class="secondary" onclick="talk()">Nopii, tenkiuu 🤍</button>
-  `;
-}
+  <script>
+    // variable global para la música
+    let musica;
 
-function yes() {
-  document.getElementById("content").innerHTML = `
-    <h1>🥹💖</h1>
+    function step2() {
+      // crear y reproducir música
+      if(!musica){
+        musica = new Audio('musica.mp3'); // <- pon el nombre de tu archivo aquí
+        musica.loop = true;
+        musica.play();
+      }
 
-    <img src="ositos.png" alt="ositos con corazón"
-         style="width:220px; margin:20px auto; display:block;">
+      document.getElementById("content").innerHTML = `
+        <h1>Hablando desde la mente 🧠</h1>
 
-    <p>
-      La parte más linda de despertar es poder pensarte apenas abro los ojos.<br><br>
-      Y es que no hay alma más bella que la que destella a través de tu cuerpo.<br><br>
-      Espero sacarte una gran sonrisaaaa 💕
-    </p>
-  `;
-}
+        <p>
+          No eres ordinaria, eres alguien asombrosa, agradable y elocuente.<br><br>
+          Y si tu mundo es un rompecabezas,
+          me encantaría complicarme para entender
+          cada una de sus piezas, encantado al momento
+          de simplemente conectar.
+        </p>
 
-function talk() {
-  document.getElementById("content").innerHTML = `
-    <h1>🤍</h1>
-    <p>
-      ¿Cómo lograste llegar, al mundo real?<br>
-      ¿Qué estás haciendo aquí?<br><br>
-      Tan cerca que te puedo tocar.<br>
-      ¿Qué estás haciendo aquí?<br>
-      ¿Qué me estás haciendo a mí?
-    </p>
-  `;
-}
+        <img src="conejito.png" alt="conejito cute"
+             style="width:200px; margin:20px auto; display:block;">
+
+        <button class="primary" onclick="step3()">Siguee 🐰</button>
+      `;
+    }
+
+    function step3() {
+      document.getElementById("content").innerHTML = `
+        <h1>Entonces… 💌</h1>
+        <p>¿Te gustaría que seamos San Valentín?</p>
+
+        <button class="primary" onclick="yes()">Obviously, d1, okitooo 💕</button><br>
+        <button class="secondary" onclick="talk()">Nopii, tenkiuu 🤍</button>
+      `;
+    }
+
+    function yes() {
+      document.getElementById("content").innerHTML = `
+        <h1>🥹💖</h1>
+
+        <img src="ositos.png" alt="ositos con corazón"
+             style="width:220px; margin:20px auto; display:block;">
+
+        <p>
+          La parte más linda de despertar es poder pensarte apenas abro los ojos.<br><br>
+          Y es que no hay alma más bella que la que destella a través de tu cuerpo.<br><br>
+          Espero sacarte una gran sonrisaaaa 💕
+        </p>
+      `;
+    }
+
+    function talk() {
+      document.getElementById("content").innerHTML = `
+        <h1>🤍</h1>
+        <p>
+          ¿Cómo lograste llegar, al mundo real?<br>
+          ¿Qué estás haciendo aquí?<br><br>
+          Tan cerca que te puedo tocar.<br>
+          ¿Qué estás haciendo aquí?<br>
+          ¿Qué me estás haciendo a mí?
+        </p>
+      `;
+    }
 
   </script>
 
 </body>
-
 </html>
