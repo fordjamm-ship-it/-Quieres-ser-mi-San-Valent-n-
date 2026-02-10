@@ -63,11 +63,6 @@
       color: #444;
     }
 
-    .neutral {
-      background: #f2f2f2;
-      color: #444;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -93,13 +88,16 @@
     // variable global para la música
     let musica;
 
-    function step2() {
-      // crear y reproducir música
+    function playMusic() {
       if(!musica){
-        musica = new Audio('musica.mp3'); // <- pon el nombre de tu archivo aquí
-        musica.loop = true;
-        musica.play();
+        musica = new Audio('musica.mp3'); // <--- Aquí va tu archivo de música
+        musica.loop = true; // para que la música se repita
       }
+      musica.play();
+    }
+
+    function step2() {
+      playMusic(); // activa la música al avanzar
 
       document.getElementById("content").innerHTML = `
         <h1>Hablando desde la mente 🧠</h1>
@@ -156,10 +154,7 @@
         </p>
       `;
     }
-
   </script>
 
 </body>
 </html>
-
-
